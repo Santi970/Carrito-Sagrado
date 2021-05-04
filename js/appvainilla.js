@@ -2,26 +2,16 @@
 es el "target", que viene a ser el elemento que 
 recibió el evento. (En este caso el botón) */
 
-// CSS colo ej:
-//$('#color-azul').css({color:'bulue', background: 'salmon', padding:'20px'}) 
-
 //La propiedad "parentElement" devuelve el elemento padre del elemento especificado.
 
-const cards = $('#cards')
-const items = $('#endregionitems')
-const footer = $('#footer')
-const templateCard = $('#template-card').content
-const templateFooter = $('#template-footer').content
-const templateCarrito = $('#template-carrito').content
+const cards = document.getElementById('cards')
+const items = document.getElementById('items')
+const footer = document.getElementById('footer')
+const templateCard = document.getElementById('template-card').content
+const templateFooter = document.getElementById('template-footer').content
+const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
-
-
-//Probando 
-$('formulario_2').submit(function(e){
-    e.preventDefault()
-    console.log('click')
-})
 
 //await tiene que estar siempre dentro de un async. 
 const fetchData = async () => {
@@ -35,7 +25,8 @@ const fetchData = async () => {
     }
 }
 
-$( document ).ready(function() {
+//El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado y parseado
+document.addEventListener('DOMContentLoaded', () => {
     fetchData()
     if(localStorage.getItem('carrito')){
         // De Json a objeto
@@ -46,11 +37,11 @@ $( document ).ready(function() {
 })
 
 //con "e" capturamos el "elemento" que queremos modificar. 
-cards.on('click', e =>{
+cards.addEventListener('click', e =>{
     addCarrito(e)
 })
 
-items.on('click', e =>{
+items.addEventListener('click', e =>{
     btnAccion(e)
 })
 
@@ -59,17 +50,17 @@ items.on('click', e =>{
 nodo en el que este método fue llamado.*/
 
 const pintarCards = data => {
-    console.log(data);
+  
     data.forEach(producto => {
-        templateCard.$('h5').textContent = producto.title;
-        templateCard.$('p').textContent = producto.precio;
-        templateCard.$('img').setAttribute('src',producto.thumbnailUrl)
-        templateCard.$('.btn-secondary').dataset.id = producto.id
+        templateCard.querySelector('h5').textContent = producto.title;
+        templateCard.querySelector('p').textContent = producto.precio;
+        templateCard.querySelector('img').setAttribute('src',producto.thumbnailUrl)
+        templateCard.querySelector('.btn-secondary').dataset.id = producto.id
         const clone = templateCard.cloneNode(true)
-        fragment.append(clone)
+        fragment.appendChild(clone)
     })
 
-    cards.append(fragment)
+    cards.appendChild(fragment)
 }
 
 //aca llega el addEventListener...
@@ -87,9 +78,9 @@ const addCarrito = e => {
 const setCarrito = objeto => {
 
     const producto = {
-        id: objeto.$('.btn-secondary').dataset.id,
-        title: objeto.$('h5').textContent,
-        precio: objeto.$('p').textContent,
+        id: objeto.querySelector('.btn-secondary').dataset.id,
+        title: objeto.querySelector('h5').textContent,
+        precio: objeto.querySelector('p').textContent,
         cantidad: 1
     }
 
@@ -106,20 +97,20 @@ const setCarrito = objeto => {
 
 const pintarCarrito = () => {
  
-    items.html = '' 
+    items.innerHTML = ''
     Object.values(carrito).forEach(producto => {
-        templateCarrito.$('th').textContent = producto.id
-        templateCarrito.$('td:first')[0].textContent = producto.title
-        templateCarrito.$('td:first')[1].textContent = producto.cantidad
-        templateCarrito.$('.btn-outline-success').dataset.id = producto.id
-        templateCarrito.$('.btn-outline-warning').dataset.id = producto.id
-        templateCarrito.$('span').textContent = producto.cantidad * producto.precio
+        templateCarrito.querySelector('th').textContent = producto.id
+        templateCarrito.querySelectorAll('td')[0].textContent = producto.title
+        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+        templateCarrito.querySelector('.btn-outline-success').dataset.id = producto.id
+        templateCarrito.querySelector('.btn-outline-warning').dataset.id = producto.id
+        templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
 
         const clone = templateCarrito.cloneNode(true)
-        fragment.append(clone)
+        fragment.appendChild(clone)
     })
 
-    items.append(fragment)
+    items.appendChild(fragment)
 
     pintarFooter()
 
@@ -128,9 +119,9 @@ const pintarCarrito = () => {
 }
 
 const pintarFooter = () => {
-    footer.html = ''
+    footer.innerHTML = ''
     if(Object.keys(carrito).length === 0) {
-        footer.html = 
+        footer.innerHTML = 
          `<th scope="row" colspan="5">Carrito vacío </th>`
         return
     }
@@ -140,15 +131,15 @@ const pintarFooter = () => {
     const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio,0)
     console.log(nPrecio)
 
-    templateFooter.$('td:first')[0].textContent = nCantidad
-    templateFooter.$('span').textContent = nPrecio
+    templateFooter.querySelectorAll('td')[0].textContent = nCantidad
+    templateFooter.querySelector('span').textContent = nPrecio
 
     const clone = templateFooter.cloneNode(true)
-    fragment.append(clone)
-    footer.append(fragment)
+    fragment.appendChild(clone)
+    footer.appendChild(fragment)
 
-    const btnVaciar = $('#vaciar-carrito')
-    btnVaciar.on('click', () => {
+    const btnVaciar = document.getElementById('vaciar-carrito')
+    btnVaciar.addEventListener('click', () => {
         carrito = {}
 
         pintarCarrito()
@@ -157,6 +148,7 @@ const pintarFooter = () => {
 
 // Btn  "+ y - "
 const  btnAccion = e => {
+    console.log(e.target)
     //accion de aumentar cantidad "+"
     if(e.target.classList.contains('btn-outline-success')){ 
         console.log(carrito[e.target.dataset.id])
@@ -165,6 +157,7 @@ const  btnAccion = e => {
         producto.cantidad = carrito[e.target.dataset.id].cantidad + 1
         carrito[e.target.dataset.id] = {...producto}
         pintarCarrito()
+
     }
 
     //accion de restar cantidad "-"

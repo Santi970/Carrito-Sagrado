@@ -1,4 +1,25 @@
+/* titulos font-family: 'Open Sans', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+/* cuerpo font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap");
 
+* {
+  margin-top: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #efefef;
+  font-family: "Spartan", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 16px;
+}
 
 /* Nav Bar */
 
@@ -61,54 +82,17 @@
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #15191de7;
+    background-color: #1d1515e7;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.2em;
   }
-  #mainNav.navbar-shrink .navbar-brand svg,
-  #mainNav.navbar-shrink .navbar-brand img {
-    height: 2.5rem;
-  }
+
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
   }
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: 0;
-  }
-}
-/* Carrito */
-.titulo_carrito{
-  text-align: center;
-  
-
-}
-
-/* Animacion index */
-.animaition-index {
-  font: normal 30pt/1.5 "BlinkMacSystemFont", cursive;
-  margin-top: 160px;
-  overflow: hidden;
-  font-weight: 100px;
-}
-.animaition-index .animationIndex__p {
-  /* version abreviada */
-  animation: 8s infinite alternate slidein;
-  color: white;
-  margin: 0px;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 100%;
-  }
-  to {
-    margin-left: 9%;
-    width: 100%;
   }
 }
 
@@ -174,56 +158,75 @@
     margin-left: -300%;
   }
 }
+/* Probando wath sap */
 
-/*-------------botones-----*/
-.btn-outline-secondary {
-  margin: 40px;
-  width: 100px;
-  height: 40px;
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:50px;
+	right:20px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
 }
 
-/* BLOQUE  Button rojo */
-/* BLOQUE FRASE detalle torta*/
-.frase {
+.my-float{
+	margin-top:16px;
+}
+
+/*  ---------------------------- PROBANDO MASTCHEAD ---------------------------- */
+
+header.masthead {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   text-align: center;
-  margin: 70px 0;
-}
-.frase .frase__texto {
-  text-align: center;
-  margin: 70px 0;
-  font-weight: 600;
-  font-family: "Amatic SC", cursive;
-  color: #212529;
-  font-size: 100px;
-}
-.frase .boton--naranja {
-  background: #eeaf26;
-  text-decoration: none;
-}
-.frase .boton--naranja:hover {
-  color: #858551;
+  color: #fff;
+  background-image: url("../img/img_sagrada/3IMAGENES.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: contain;
+  
 }
 
-/* Boton amarillo  */
-.boton {
-  border: none;
-  min-width: 160px;
-  height: 50px;
-  padding: 0 30px;
-  color: white;
-  display: inline-block;
-  border-radius: 100px;
-  text-decoration: none;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #eeaf26;
-  transition: 0.3s ease all;
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  color:  white;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.boton:hover {
+header.masthead .masthead-heading:hover {
   color: #3c9492;
 }
 
+@media (min-width: 768px) {
+  header.masthead {
+    height: 20vh;
+    padding-top: 2rem;
+    padding-bottom: 25rem;
+    background-color: white;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+    margin-top:  9rem;
+    align-items:center;
+  }
+}
 
 /*  WAVES tortas */
 #section-tortas {
@@ -277,37 +280,11 @@
   left: 0;
   width: 100%;
   height: 290px;
-  background: url(../css/wave/wave_tortas.svg);
+  background: url(../css/waves/wave_tortas.svg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-}
-
-/* Paleta de colores */
-/* colores sagrados */
-/*-------------------- ETIQUETAS-------------------------- */
-a {
-  text-decoration: none;
-  color: brown;
-}
-
-p {
-  color: #661d1d;
-  margin: 2%;
-}
-
-h2 {
-  color: #584332;
-}
-
-h3 {
-  margin: 20px;
-  font-size: 30px;
-  color: #927156;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #color-sagrado {
@@ -356,34 +333,6 @@ header {
   padding: 12px;
 }
 
-/* Paleta de colores */
-/* colores sagrados */
-/* Font Awesome font-family: 'Amatic SC', cursive; */
-/* fuente ancho */
-#ancho-1 {
-  width: 4px;
-}
-
-#ancho-2 {
-  width: 8px;
-}
-
-#ancho-3 {
-  width: 12px;
-}
-
-#ancho-4 {
-  width: 16px;
-}
-
-#ancho-5 {
-  width: 20px;
-}
-
-#ancho-6 {
-  width: 24px;
-}
-
 /*-----------SIZE CARDS------------*/
 #cardSpaceCarouselIndex {
   width: 100%;
@@ -425,78 +374,25 @@ header {
   box-shadow: 2px 2px 10px #666;
   padding: 3px;
   width: 100%;
-  height: 220px;
-  margin-top: 100px;
-  margin-bottom: 20rem;
+  height: 356px;
+  margin-top: 25px;
+  margin-bottom: 3rem;
 }
 #BannerIndex img {
   width: 100%;
   height: 350px;
-}
-#BannerIndex .text-muted {
-  margin-top: 30px;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .BannerIndex_a {
   text-decoration: none;
 }
 
-/*------- MASTHEAD  ------- */
-.masthead {
-  padding-top: 12.5rem;
-  border-top: 1px solid;
-  padding-bottom: 1rem;
-  text-align: center;
-  color: #fff;
-  background-image: url("../img/img_sagrada/equipo_contortascerca.JPG");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-}
-.masthead .masthead-subheading {
-  font-size: 1.5rem;
-  font-style: italic;
-  line-height: 1.5rem;
-  margin-bottom: 25px;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.masthead .masthead-heading {
-  font-size: 3.25rem;
-  font-weight: 700;
-  line-height: 3.25rem;
-  margin-bottom: 2rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-/*   -----  Masthead   recordar que esto modifica lo grande no lo chico -----  */
-@media (min-width: 768px) {
-  header.masthead {
-    padding-top: 22rem;
-    padding-bottom: 22rem;
-  }
-  header.masthead .masthead-subheading {
-    font-size: 2.25rem;
-    font-style: italic;
-    line-height: 2.25rem;
-    margin-bottom: 2rem;
-  }
-  header.masthead .masthead-heading {
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 4.5rem;
-    margin-bottom: 4rem;
-  }
-}
 
 /*    DETALLE TORTAS     */
+
+#sombra-inferior {
+  box-shadow: 1px 1px 5px #666;
+}
 
 #detalle-torta .detalle-torta__item {
   max-width: 25rem;
@@ -515,7 +411,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(254, 209, 54, 0.9);
+  background: #3c9492dc;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -529,10 +425,11 @@ header {
 #detalle-torta .detalle-torta-hover .frase-hover {
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  margin: 2px;
 }
 
 #detalle-torta .detalle-torta-caption {
@@ -541,17 +438,15 @@ header {
   background-color: #fff;
 }
 #detalle-torta .detalle-torta-caption .detalle-torta-caption-heading {
-  font-size: 1.5rem;
-  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0;
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
 }
 #detalle-torta .detalle-torta-caption .detalle-torta-caption-subheading {
   font-style: italic;
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Roboto", sans-serif;
 }
 
 #detalle-torta
@@ -571,22 +466,21 @@ header {
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
+  
 }
 
 .detalle-torta-modal h2.item-intro {
-  font-size: 1rem;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  
 }
 
 .detalle-torta-modal p.item-intro {
   margin-bottom: 2px;
-  font-size: 14px;
-  font-style: italic;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
 }
 
 .detalle-torta-modal ul.list-inline {
@@ -627,16 +521,18 @@ header {
   margin-top: -3rem;
   font-size: 3rem;
   line-height: 3rem;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", sans-serif;
   margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+#margin-p {
+  margin-bottom: 15px;
 }
 
 /* Las Sagradas*/
 #las-sagradas {
-  border-bottom: 1px solid;
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -652,7 +548,7 @@ header {
   background-image: url("../img/img_mobile/equipo_contortas_mobile.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 80vh;
+  height: 100vh;
   margin: 0px;
 }
 #las-sagradas .las-sagradas__img-div img {
@@ -664,7 +560,7 @@ header {
 #las-sagradas h4 {
   color: #3c9492;
   font-size: 30px;
-  border-bottom: 1px solid #3c9492;
+  font-family: "Open Sans", sans-serif;
 }
 #las-sagradas h5 {
   color: #454a46;
@@ -672,11 +568,11 @@ header {
   margin: 10px 0 10px 0;
 }
 #las-sagradas p {
+  color: #454a46;
   margin-bottom: 30px;
+  font-size: 15px;
   justify-content: center;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Open Sans", sans-serif;
 }
 
 /* De aca se modifica la pantalla grande no mobile*/
@@ -686,7 +582,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 130px 80px;
+    margin: 10px 80px;
     text-align: center;
   }
   #las-sagradas p {
@@ -694,6 +590,7 @@ header {
     padding: 0 20px 0 0;
     text-align: center;
     color: #454a46;
+    font-size: 20px;
     width: 50vw;
   }
   #las-sagradas h4 {
@@ -728,58 +625,51 @@ header {
   }
 }
 
-/*********  
-16.Testimonials
-*********/
-section#contacto {
+/*  Footer - contacto*/
+footer {
   background-color: #3c9492;
+  height: 30vh;
 }
 
-section#contacto h3 {
-  text-transform: uppercase;
-  margin-top: 20px;
-  color: #fff;
-}
-
-@media (max-width: 640px) {
-  section#contacto .item {
-    text-align: center;
-  }
-}
-
-/* Las Sagradas*/
 #contacto {
+  display: flex;
+  align-items: center;
   text-align: center;
+  padding-bottom: 20px;
+}
+
+#contacto .contacto__ubicacion h4 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-#contacto .contacto__articulo {
-  margin: 10px;
-  text-align: center;
-}
-#contacto .contacto__text h4 {
-  font-size: 32px;
-  color: white;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-#contacto p {
+  width: 60vw;
+  order: 0;
+  margin-top: 20px;
   font-size: 25px;
   color: white;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900; 
+}
+
+#contacto .contacto__tel {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  order: 1;
+  font-size: 22px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+#contacto p {
+  font-size: 20px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 #contacto .tel_wsap {
   display: block;
   text-decoration: none;
-  font-size: 25px;
-  color: #d4d0d0;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 20px;
+  color: #f1eaea;
+  font-family: 'Open Sans', sans-serif;
 }
 #contacto .tel_wsap:hover {
   color: white;
@@ -788,41 +678,10 @@ section#contacto h3 {
   display: block;
   text-decoration: none;
   font-size: 25px;
-  color: #d4d0d0;
-  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #f1eaea;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* Font Awesome font-family: 'Amatic SC', cursive; */
-/* fuente ancho */
-#ancho-1 {
-  width: 4px;
-}
-
-#ancho-2 {
-  width: 8px;
-}
-
-#ancho-3 {
-  width: 12px;
-}
-
-#ancho-4 {
-  width: 16px;
-}
-
-#ancho-5 {
-  width: 20px;
-}
-
-#ancho-6 {
-  width: 24px;
-}
-
-/* Paleta de colores */
-/* colores sagrados */
-/* NUEVO NAV */
 
 @media (min-width: 992px) {
   #mainNav {
@@ -840,7 +699,7 @@ section#contacto h3 {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529d8;
+    background-color: #ffffff;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -873,81 +732,162 @@ svg {
   margin-top: -0.9rem;
 }
 
-/* Paleta de colores */
-/* colores sagrados */
-/* Paleta de colores */
-/* colores sagrados */
-/*  --------------TITULOS---------------   */
-.tituloIframeIndex {
-  background-color: white;
+
+/* <<<<<<<<<<<<< FORMS REGISTRO Y LOGIN >>>>>>>>>>>>>>>>>>>>>> */
+.content-registro {
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  padding: 1.5em; }
+  .content-registro .logo {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Open Sans', sans-serif;}
+    .content-registro .logo .logo__spam {
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      width: 1000px;
+      border-radius: 30px;
+      margin-top: 150px;
+      color: #3C9492; }
+
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 srgba(255, 255, 255, 0.3); }
+
+.contact-wrapper > * {
+  padding: 1em; }
+
+.contact-form {
+  background: #FDFEF7;
+  font-family: 'Open Sans', sans-serif; }
+  .contact-form button, .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: black;
+    border-bottom: 1px solid #ECBEB4; }
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'Open Sans', sans-serif; }
+  .contact-form form button:hover,
+  .contact-form form button:focus {
+    background: #ECBEB4;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0; }
+
+.contact-form form label {
+  display: block;
+  font-family: 'Open Sans', sans-serif; }
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em; }
+
+.contact-form form .block {
+  grid-column: 1 / 3; }
+
+.contact-form form button {
+  background: #B0D8D4;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em; }
+
+/* CONTACT INFO */
+.contact-info {
+  background: #FDFEF7; }
+  .contact-info ul {
+    list-style: none;
+    padding: 0; }
+  .contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0; }
+
+.link-goToRegiter {
+  text-align: center; }
+  .link-goToRegiter .link-goToRegiter__text {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    flex-direction: center;
+    color: #3C9492; }
+    .link-goToRegiter .link-goToRegiter__text:hover {
+      color: #ECBEB4; }
+
+/* EFECTOS JQUERY*/
+
+#panel, #flip {
+  padding: 5px;
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 50%;
-  font: normal 30pt/1.5 "BlinkMacSystemFont", cursive;
 }
 
-.tiuloLogin {
-  background-color: white;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 50%;
-  margin-left: 25%;
-  font: normal 30pt/1.5 "BlinkMacSystemFont", cursive;
-  border-radius: 10px;
-  box-shadow: 0 0 7px #070808;
+#panel {
+  padding: 50px;
+  display: none;
+  color:  white;
+  font-size: 24px;
+  background-color:   #3C9492; 
 }
 
-.tituloTortas {
-  background-color: white;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 50%;
-  margin-left: 25%;
-  font: normal 30pt/1.5 "BlinkMacSystemFont", cursive;
-  border-radius: 10px;
-  box-shadow: 0 0 7px #070808;
-}
-
-.tituloTortaCarrito {
-  background-color: white;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 50%;
-  margin-left: 25%;
-  font: normal 30pt/1.5 "BlinkMacSystemFont", cursive;
-  border-radius: 10px;
-  box-shadow: 0 0 7px #070808;
-}
-
-#titulo-banner-index {
-  font-family: "Amatic SC", cursive;
-  margin-top: 25px;
-  margin-bottom: 10px;
-  font-size: 40px;
-}
-
-/* Paleta de colores */
-/* colores sagrados */
-/*----------- Bosstrap-------------*/
-.text-muted {
-  text-align: center;
-}
-
-.btn-group {
-  margin-left: 35px;
-}
 
 /*////////////////////////////////////////////////// MEDIA QUERIES modo MOBILE! ///////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 576px) {
   #detalle-torta {
     margin-top: 10vh;
   }
-  #tortas_cards{
-    margin-top: 130px;
+
+  /*  ---------------------------- PROBANDO MASTCHEAD ---------------------------- */
+
+  header.masthead {
+    margin: 1px;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    background-color: white;
+    color: #fff;
+    background-image: url("../img/img_mobile/banner_img_mobile_mod.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+  
+  }
+  header.masthead .container{
+    margin: 1rem
+  }
+  
+  header.masthead .masthead-heading {
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    color:  white;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  header.masthead .masthead-heading:hover {
+    color: #3c9492;
+  }
+  
+  @media (min-width: 768px) {
+    header.masthead {
+      height: 20vh;
+      padding-top: 12rem;
+      padding-bottom: 25rem;
+      background-color: white;
+    }
+    header.masthead .masthead-heading {
+      font-size: 6.5rem;
+      font-weight: 700;
+      line-height: 4.5rem;
+      margin-top: 14.5rem; 
+      align-items:center;
+    }
   }
 
   /* DETALLE TORTA MODAL #detalle-torta  */
@@ -955,7 +895,6 @@ svg {
   .detalle-torta-modal .modal-dialog {
     min-width: 95%;
     margin-left: auto;
-    
   }
 
   .detalle-torta-modal .modal-content h2 {
@@ -980,9 +919,21 @@ svg {
     cursor: pointer;
     background-color: transparent;
   }
+
+  /* HOVER OCULTO MOBILE */
+  #detalle-torta .detalle-torta-hover {
+    visibility: hidden;
+  }
+  #detalle-torta .detalle-torta-hover .detalle-torta-hover-content {
+    visibility: hidden;
+  }
+  #detalle-torta .detalle-torta-hover .frase-hover {
+    visibility: hidden;
+  }
   .detalle-torta-modal .close-modal:hover {
     opacity: 0.3;
   }
+
 
   #size-logonav {
     font-size: 2rem;
@@ -993,29 +944,7 @@ svg {
   #detalle-torta_mobilemargin {
     margin-top: 70px;
   }
-  /*  BANER INDEX */
-  #BannerIndex {
-    box-shadow: 2px 2px 10px #666;
-    padding: 3px;
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    background-image: url("../img/img_mobile/banner_img_mobile.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 55vh;
-    margin-top: 20px;
-    margin-bottom: 60px;
-  }
-  #BannerIndex img {
-    visibility: hidden;
-  }
-  #BannerIndex .text-muted {
-    margin-top: -50px;
-    justify-content: start;
-    margin-bottom: 60px;
-    color: white;
-  }
+  
   /* Carousel index */
   .slider {
     width: 100%;
@@ -1024,7 +953,7 @@ svg {
     margin-top: 20px;
     overflow: hidden;
     border-top: 1px solid;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .slider ul {
     display: flex;
@@ -1046,55 +975,52 @@ svg {
     background-position: center center;
     background-size: cover;
   }
-  /* MEDIA QUERIES - Footer */
-  .containerFooter {
-    flex-wrap: wrap;
-  }
-  .rowColumn2,
-  .rowColumn3 {
-    margin-top: 60px;
-    margin-bottom: 20px;
-  }
-  /* Form login y registro */
-  .contact-form form .block {
-    grid-column: 1;
-  }
-  /* FOOTER */
-  .footer {
-    display: flex;
-    flex-flow: wrap row;
-    align-items: flex-end;
-  }
-  /* text area form pago */
-  #text-area__area {
-    width: 300px;
-    margin-left: 3px;
-  }
-  .boton--red {
-    margin-left: 70px;
-  }
-  /* LARGE SIZE */
-}
-
-@media only screen and (max-width: 576px) and (min-width: 700px) {
-  body {
-    padding: 0 4em;
-  }
-  .contact-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-  .contact-wrapper > * {
-    padding: 2em;
-  }
-  .contact-info h4,
-  .contact-info ul,
-  .contact-info p {
-    text-align: left;
-  }
-
   
+
+  /* Las Sagradas  #3c9492;*/
+  /* Footer */
+  footer {
+    background-color: #3c9492;
+    height: 50vh;
+  }
+  #contacto {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #contacto .contacto__articulo {
+    margin: 10px;
+    text-align: center;
+  }
+  #contacto .contacto__ubicacion h4 {
+    font-size: 20px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  #contacto .tel_wsap {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #d4d0d0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  #contacto .tel_wsap:hover {
+    color: white;
+  }
+  #contacto .ic_ubicacion {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #d4d0d0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .margin-footer {
+    margin-top: -142px;
+  }
 }
+
 
 
 @media only screen and (max-width: 576px) {
@@ -1119,19 +1045,14 @@ svg {
   .detalle-torta-modal .modal-content h2 {
     font-size: 1rem;
     line-height: 3rem;
-    font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    margin-bottom: 2rem;
-    padding-top: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: -10px;
+   
   }
 
   .detalle-torta-modal p.item-intro {
     font-size: 10px;
-    font-style: italic;
-    font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Roboto', sans-serif;
   }
   .detalle-torta-modal img {
     width: 100%;
@@ -1164,17 +1085,12 @@ svg {
   .detalle-torta-modal h2.item-intro {
     margin: 0;
     font-size: 0.5rem;
-    font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Open Sans', sans-serif;
   }
   .detalle-torta-modal p.item-intro {
     margin-bottom: 2px;
-    font-size: 10px;
-    font-style: italic;
-    font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
   }
   .detalle-torta-modal .close-modal {
     position: absolute;
@@ -1192,40 +1108,53 @@ svg {
     overflow-x: hidden;
     overflow-y: auto;
   }
+  /* Form login y registro */
+  .content-registro{
+    margin-bottom: 10rem;
+  }
+  .contact-form form .block {
+    grid-column: 1; }
+  
 
+  .contact-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Open Sans', sans-serif; }
+    .contact-form form button:hover,
+    .contact-form form button:focus {
+      background: #ECBEB4;
+      color: #fff;
+      transition: background-color 1s ease-out;
+      outline: 0; }
+  .contact-form form label {
+    display: block;
+    font-family: 'Open Sans', sans-serif; }
+  .contact-form form p {
+    margin: 0;
+    padding: 1em; }
+  .contact-form form .block {
+    grid-column: 1 / 1; }
+  .contact-form form button {
+    background: #B0D8D4;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em; }
 }
 
 /*//////////////////////////////////////// MEDIA QUERIES modo TABLET! ////////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 991px) and (min-width: 576px) {
   /*  BANER INDEX */
-  
-#mainNav {
-  width: 100%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: white;
-  padding: 0;
-  box-shadow: 1px 1px 5px #999;
-}
+
+  #mainNav {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    padding: 0;
+    box-shadow: 1px 1px 5px #999;
+  }
 
 
-    /*  BANER INDEX */
-    #BannerIndex {
-      box-shadow: 2px 2px 10px #666;
-      padding: 3px;
-      width: 100%;
-      overflow: hidden;
-      text-align: center;
-      background-image: url("../img/img_tablet/banner_torta_tablet.png");
-      background-repeat: repeat-x;
-      background-size: contain;
-      height: 55vh;
-      margin-top: 20px;
-      margin-bottom: 60px;
-    }
-    #BannerIndex img {
-      visibility: hidden;
-    }
   /* Carousel index */
   .slider {
     width: 100%;
@@ -1253,18 +1182,81 @@ svg {
     margin: auto;
     box-shadow: 3px 3px 5px #999;
   }
-  /* MEDIA QUERIES - selection wave  */
-  .section-index_wave:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: url(../css/wave/wave_tortas.svg);
-    background-size: cover;
+
+  header.masthead {
+  
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    color: #fff;
+    background-image: url("../img/img_mobile/banner_img_mobile.png");
     background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
   }
+  
+  header.masthead .masthead-heading {
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    color:  white;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  header.masthead .masthead-heading:hover {
+    color: #3c9492;
+  }
+  
+  @media (min-width: 768px) {
+    header.masthead {
+      height: 20vh;
+      padding-top: 12rem;
+      padding-bottom: 25rem;
+      background-color: white;
+    }
+    header.masthead .masthead-heading {
+      font-size: 6.5rem;
+      font-weight: 700;
+      line-height: 4.5rem;
+      margin-top: 14.5rem; 
+      align-items:center;
+    }
+  }
+
+
+  /*  WAVES tortas */
+#section-tortas {
+  width: 100%;
+  height: 90px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.section-tortas_wave {
+  position: relative;
+  background-image: url(../img/img_sagrada/todas.JPG);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.section-tortas_wave:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: url(../img/img_sagrada/todas.JPG);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
   .menu {
     text-align: start;
     width: 90%;
@@ -1301,9 +1293,9 @@ svg {
     margin-top: 60px;
     margin-bottom: 20px;
   }
+
   /* Las Sagradas*/
   #las-sagradas {
-    border-bottom: 1px solid;
     padding-bottom: 1rem;
     text-align: center;
     display: flex;
@@ -1323,6 +1315,7 @@ svg {
     background-size: contain;
     height: 80vh;
     margin: 0px;
+    margin-bottom: -30px;
   }
   #las-sagradas .las-sagradas__img-div img {
     visibility: hidden;
@@ -1344,9 +1337,7 @@ svg {
   #las-sagradas p {
     margin-bottom: 30px;
     text-align: center;
-    font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Roboto', sans-serif;
   }
   /*---------------------- MEDIA QUERY detalle torta  ------------------- */
   .contentIndex div p {
@@ -1370,66 +1361,79 @@ svg {
   #cardSpaceIndex {
     margin-left: 400px;
   }
- /*  WAVES tortas */
-/*  WAVES tortas */
-#section-tortas {
-  width: 100%;
-  min-height: 290px;
-  margin: 0px;
-  padding: 0px;
+  /*  WAVES tortas */
+  /*  WAVES tortas */
+  #section-tortas {
+    width: 100%;
+    min-height: 290px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .detalle-torta-modal .modal-dialog .modal-content {
+    padding-top: 2rem;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  .detalle-torta-modal h2.item-intro {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  .detalle-torta-modal p.item-intro {
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .section-tortas_wave {
+    position: relative;
+    background-image: url(../img/img_sagrada/todas.JPG);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: start;
+    background-size: cover;
+  }
+
+  .section-tortas_wave:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: url(../img/img_sagrada/todas.JPG);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  /*  WAVES index */
+  #section-index {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .section-index_wave {
+    position: relative;
+    background-image: url(../img/img_sagrada/todas.JPG);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .section-index_wave:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: url(../css/wave/wave_tortas.svg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+  }
+    
+
 }
-
-.section-tortas_wave {
-  position: relative;
-  background-image: url(../img/img_sagrada/todas.JPG);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: start;
-  background-size: cover;
-}
-
-
-.section-tortas_wave:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: url(../img/img_sagrada/todas.JPG);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-}
-
-/*  WAVES index */
-#section-index {
-  width: 100%;
-  min-height: 400px;
-}
-
-.section-index_wave {
-  position: relative;
-  background-image: url(../img/img_sagrada/todas.JPG);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-}
-
-.section-index_wave:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 400px;
-  background: url(../css/wave/wave_tortas.svg);
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-}
-
-}
-
