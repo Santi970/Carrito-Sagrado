@@ -835,6 +835,24 @@ svg {
   background-color:   #3C9492; 
 }
 
+#efecto-index{
+  position: absolute;
+  text-align: center;
+  color:white;
+  font-size: 50px;
+  font-weight: bold;
+  margin: auto;
+  top: 25rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  
+}
+
+
+
+
 
 /*////////////////////////////////////////////////// MEDIA QUERIES modo MOBILE! ///////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 576px) {
