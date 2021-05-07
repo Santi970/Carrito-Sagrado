@@ -11,6 +11,9 @@ $(document).ready(function(){
   });
 
 
-  //Efecto bienvenida index
-  $("#efecto-index").prepend('<h3 >Bienvenidos a Sagrada Pasteleria!!</h3>');
-  $("h3").fadeOut(4000); 
+ //Efecto bienvenida index
+$("#efecto-index").prepend('<h3 id="h3-efindex" >Bienvenidos a Sagrada Pasteleria!!</h3>');
+$("h3").fadeOut(4000); 
+
+
+

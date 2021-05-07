@@ -838,16 +838,21 @@ svg {
 #efecto-index{
   position: absolute;
   text-align: center;
-  color:white;
-  font-size: 50px;
-  font-weight: bold;
   margin: auto;
   top: 25rem;
   left: 0;
   right: 0;
   bottom: 0;
+
+}
+
+#h3-efindex{
+  color:white;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
   
-  
+
 }
 
 
