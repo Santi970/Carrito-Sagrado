@@ -2,55 +2,55 @@
     {
       "precio": 2000,
       "id": 1,
-      "title": "Rogel",
+      "title": "Chocotorta",
       "thumbnailUrl": "../img/img_sagrada/chocotorta_entera.jpg"
     },
     {
       "precio": 1300,
       "id": 2,
-      "title": "Frutilla",
+      "title": "Mousse",
       "thumbnailUrl": "../img/img_sagrada/mousse_1.jpg"
     },
     {
       "precio": 1900,
       "id": 3,
-      "title": "Choco Oreo",
+      "title": "Rogel",
       "thumbnailUrl": "../img/img_sagrada/rojel_verde.JPG"
     },
     {
       "precio": 1850,
       "id": 4,
-      "title": "Mousse",
+      "title": "Tarta Oreo",
       "thumbnailUrl": "../img/img_sagrada/tarta_oreo2.JPG"
     },
     {
       "precio": 1410,
       "id": 5,
-      "title": "Lemon Pie",
+      "title": "Frutilla",
       "thumbnailUrl": "../img/img_sagrada/frutilla_conramaverde.jpg"
     },
     {
       "precio": 1650,
       "id": 6,
-      "title": "Chocotorta",
+      "title": "Lemon Pie",
       "thumbnailUrl": "../img/img_sagrada/lemon.JPG"
     },
     {
       "precio": 1850,
       "id": 4,
-      "title": "Mousse",
+      "title": "Havannete",
       "thumbnailUrl": "../img/img_sagrada/havannete_blanco.jpg"
     },
     {
       "precio": 1980,
       "id": 5,
-      "title": "Lemon Pie",
+      "title": "Havannete Negro",
       "thumbnailUrl": "../img/img_sagrada/havannete_negro.jpg"
     },
     {
       "precio": 1650,
       "id": 6,
-      "title": "Chocotorta",
+      "title": "Lemon Pie",
       "thumbnailUrl": "../img/img_sagrada/lemon_pie_lejos.JPG"
     }
       
