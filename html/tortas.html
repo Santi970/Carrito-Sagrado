@@ -88,8 +88,11 @@
         <div class="shadow p-3 mb-5 bg-white rounded">
         <h1 class="titulo_carrito"> CARRITO <i class="fas fa-shopping-cart"></i></h1>
         <hr>
+
+        <!--  Tabla Carrito -->
         <table class="table">
         <thead>
+
           <tr>
             <th scope="col"><i class="fas fa-chevron-circle-down"></i></th>
             <th scope="col">Compras</th>
@@ -98,16 +101,19 @@
             <th scope="col">Total</th>
           </tr>
         </thead>
-        <tbody id="items"></tbody>
-        <tfoot>
-          <tr id="footer">
+        <tbody id="items"></tbody> <!--Aca vienen los elementos -->
+
+        <tfoot> 
+          <tr id="footer"> <!--Aca el tfooter-->
             <th scope="row" colspan="5">Carrito vacío</th>
           </tr>
         </tfoot>
+
       </table>
       </div>
     </div>
 
+    <!-- Footer Carrito -->
     <template id="template-footer">
         <th scope="row" colspan="2">Total productos</th>
         <td>10</td>
@@ -122,7 +128,7 @@
 
 
   <!-- Template-card vainilla-->
-    <div id="template-card">
+    <div class="row"id="template-card">
       <div class="col-12 mb-2 col-md-4">
         <div class="shadow p-3 mb-5 bg-white rounded">
           <img src="" alt="" class="card-img-top"> 
