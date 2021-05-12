@@ -5,9 +5,9 @@ class Api {
         this._data = null;
         this._result = [];
     }
-    //curl
-    //fetch es js puro
-    //axios es una libreria
+   
+
+    
     callApi = async () => {
         const params = this._getParams();
         $.ajax(params)
