@@ -95,6 +95,7 @@ body {
     margin-right: 0;
   }
 }
+/* PROBANDO */
 
 #sombras {
   box-shadow: 0 0 7px #070808;
@@ -158,6 +159,7 @@ body {
     margin-left: -300%;
   }
 }
+/* PROBANDO ALINEAR CARDS JQUERY*/
 /* Probando wath sap */
 
 .float{
@@ -855,6 +857,29 @@ svg {
 
 }
 
+.titulo_carrito{
+  text-align: center;
+  color: #3C9492;
+}
+
+/* BUTTONS */
+#comprarButton{
+  position: absolute;
+  left: 78%;
+  background-color: #3C9492;
+  border:none;
+}
+
+#vaciar-carrito{
+
+  background-color: #3C9492;
+  border:none;
+}
+
+#btnComprarCards{
+  background-color: #3C9492;
+  border:none;
+}
 
 
 
@@ -863,6 +888,12 @@ svg {
 @media only screen and (max-width: 576px) {
   #detalle-torta {
     margin-top: 10vh;
+  }
+
+  /*BUTTONS*/
+  #comprarButton{
+    position: absolute;
+    left: 40%;
   }
 
   /*  ---------------------------- PROBANDO MASTCHEAD ---------------------------- */
@@ -1007,6 +1038,7 @@ svg {
     height: 50vh;
   }
   #contacto {
+    margin-top: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;

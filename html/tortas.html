@@ -12,7 +12,6 @@
     <!-- JQuery  + Jquery validation--> 
     <script src="../js/vendor/jquery.js"  ></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <script src="../js/app.js" type="module" ></script>
      <!-- SEO --> 
     <meta name="keywords" content="venta de tortas, tortas, pasteleria, cocina, pasteleria">
     <meta name="description" content="Venta de tortas caseras gourmet, pedidos con 48hs de anticipación">
@@ -45,45 +44,8 @@
 
 
 
-<!------------busqueda JQUERY -------------->
-<div class="container">
-    <div class="row card">
-        <div class="col-sm-4">
-            <form name="searchForm">
-                <div class="form-group">
-                    <label for='search' > Buscador Mercado Libre (Solo para Demostrar ajax, nada que ver despues lo borro)</label>
-                    <input id='search' type="text" name="search" class="form-control" placeholder="Buscar">
-                </div>
-                <button type="submit" class="btn btn-primary">Buscar</button>
-            </form>
-        </div>
-        <div class="col-sm-8">
-            <div class="row" id="productsContainer">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal -->
-<div class="modal" id="productModal" tabindex="-1">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Product</h5>
-                <button type="button" class="close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img id="thumbnail" alt="thumbnail">
-                <p class="description"></p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <!---------- TORTAS VAINILLA -------------->
-    <div class="container" id="tortas_cards" >
+<div class="container" id="tortas_cards" >
         <div class="row" id="cards"> </div>
         <div class="shadow p-3 mb-5 bg-white rounded">
         <h1 class="titulo_carrito"> CARRITO <i class="fas fa-shopping-cart"></i></h1>
@@ -94,6 +56,7 @@
         <thead>
 
           <tr>
+          
             <th scope="col"><i class="fas fa-chevron-circle-down"></i></th>
             <th scope="col">Compras</th>
             <th scope="col">Cantidad</th>
@@ -101,14 +64,18 @@
             <th scope="col">Total</th>
           </tr>
         </thead>
+        
         <tbody id="items"></tbody> <!--Aca vienen los elementos -->
 
         <tfoot> 
           <tr id="footer"> <!--Aca el tfooter-->
             <th scope="row" colspan="5">Carrito vacío</th>
           </tr>
+          <td><button class="btn btn-danger btn-sm" id="comprarButton">
+                Comprar
+        </button> </td>
         </tfoot>
-
+      
       </table>
       </div>
     </div>
@@ -120,11 +87,13 @@
         <td>
             <button class="btn btn-danger btn-sm" id="vaciar-carrito">
                 vaciar todo
-            </button>
-     
+            </button>     
         </td>
         <td class="font-weight-bold">$ <span>5000</span></td>
+ 
     </template>
+
+  
 
 
   <!-- Template-card vainilla-->
@@ -135,7 +104,7 @@
           <div class="card-body">
             <h5>Titulo</h5>
             <p>precio</p>
-            <button class="btn btn-secondary">Comprar</button>
+            <button id="btnComprarCards"class="btn btn-secondary">Comprar</button>
           </div>
         </div>
       </div>
@@ -163,9 +132,6 @@
         <i class="fa fa-whatsapp my-float"></i>
 </a>
 
-
-<!-- PROBANDO POST ajax-->
-   <section id="post"></section>
 
 <!-- Footer-Contacto -->
 <footer id="contacto" class="margin-footer">  

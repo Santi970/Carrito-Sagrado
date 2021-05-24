@@ -11,6 +11,7 @@ const templateCard = document.getElementById('template-card').content
 const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
+const btnComprar = document.getElementById('comprarButton')
 let carrito = {}
 
 //await tiene que estar siempre dentro de un async. 
@@ -45,13 +46,16 @@ items.addEventListener('click', e =>{
     btnAccion(e)
 })
 
+//BTN comprar de carrito
+btnComprar.addEventListener('click', comprarButtonClicked);
+
 //Template Card con fragment para evitar reflow
 /*El método Node.cloneNode() devuelve un duplicado del 
 nodo en el que este método fue llamado.*/
 
 const pintarCards = data => {
   
-    data.forEach(producto => {
+    data.forEach(   producto => {
         templateCard.querySelector('h5').textContent = producto.title;
         templateCard.querySelector('p').textContent = producto.precio;
         templateCard.querySelector('img').setAttribute('src',producto.thumbnailUrl)
@@ -171,4 +175,11 @@ const  btnAccion = e => {
 
     }
     e.stopPropagation()
+    
+}
+//Al comprar vaciamos carrito
+function comprarButtonClicked(){
+    console.log(carrito) 
+    carrito = {}
+    pintarCarrito()
 }
