@@ -895,6 +895,13 @@ svg {
     position: absolute;
     left: 40%;
   }
+  
+  #h3-efindex{
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    top: -50%;
+  }
 
   /*  ---------------------------- PROBANDO MASTCHEAD ---------------------------- */
 
